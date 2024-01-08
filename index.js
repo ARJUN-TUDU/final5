@@ -3,12 +3,18 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const app = express();
-app.use(cors());
+
 app.use(express.json());
 dotenv.config();
 const PORT = process.env.PORT || 4000;
 
-
+app.use(cors(
+    {
+        origin: ["https://final5-frontend.vercel.app/"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 
 try{
