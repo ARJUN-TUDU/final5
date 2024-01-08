@@ -3,9 +3,11 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const app = express();
-app.use(cors());
 app.use(express.json());
 dotenv.config();
+const PORT = process.env.PORT || 4000;
+
+
 
 
 try{
@@ -110,7 +112,7 @@ app.post("/insert",async (req,res)=>{
 
 
 ;
-app.listen(5000,(err)=>{
+app.listen(PORT,(err)=>{
     
     if(err){
 
