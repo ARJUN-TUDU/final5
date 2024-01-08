@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 4000;
 
 app.use(cors(
     {
-        origin: ["https://final5-frontend.vercel.app/"],
+        origin: ["https://final5-frontend.vercel.app"]
         methods: ["POST", "GET"],
         credentials: true
     }
